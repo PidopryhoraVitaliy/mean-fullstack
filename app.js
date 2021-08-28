@@ -9,6 +9,12 @@ const positionRoutes = require('./routes/position')
 const keys = require('./config/keys')
 const app = express()
 
+const UserService = require('./Users.service')
+UserService.getAllUsers()
+
+
+console.log(process.env.MONGO_URI);
+
 mongoose.connect(keys.mongoURI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
